@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\TwitterController;
+use App\Http\Controllers\Authentification\LoginController;
+use App\Http\Controllers\Authentification\TwitterController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 
 Route::post('/', [LoginController::class, 'login']);
